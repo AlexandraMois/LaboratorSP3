@@ -7,8 +7,11 @@ public class Author {
 		this.nume = nume;
 	}
 	
-	public void print() {
-		System.out.println("Autor: " + this.nume);
+	public String getName() {
+		return nume;
 	}
-
+	public void setName(String nume) {
+		this.nume = nume;
+	}
 }
+

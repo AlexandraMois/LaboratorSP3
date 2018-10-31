@@ -7,7 +7,31 @@ public class Table implements Element {
 		this.numeTabel = numeTabel;
 	}
 	
-	public void print() {
-		System.out.println(this.numeTabel);
+	public String getName() {
+		return numeTabel;
+	}
+	public void setName(String name) {
+		this.numeTabel = name;
+	}
+	
+	@Override
+	public void print(){
+		System.out.println("TABLE");
+		System.out.println(numeTabel);
+	}
+	@Override
+	public void add(Element e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void remove(Element e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void getChild(int index) {
+		// TODO Auto-generated method stub
+		
 	}
 }
