@@ -2,6 +2,7 @@ package laboratorSP;
 
 public class Text implements Element{
 	private String text;
+	private Alignstrategy s;
 	
 	public Text(String text) {
 		this.text = text;
@@ -29,7 +30,15 @@ public class Text implements Element{
 		
 	}
 	
+	public void setAlignStrategy(Alignstrategy s) {
+		this.s = s;
+	}
+	
 	public void print() {
-		System.out.println(this.text);
+		if(s == null) {
+			System.out.println(this.text);
+		} else {
+			s.printAligned(this.text);
+		}
 	}
 }
