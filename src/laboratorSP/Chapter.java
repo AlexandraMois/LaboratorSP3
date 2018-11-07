@@ -55,4 +55,10 @@ public class Chapter implements Element {
 		this.content = content;
 	}
 	
+	@Override
+	public void accept(Visitor v) {
+		for(Element elem : content) {
+			elem.accept(v);
+		}
+	}
 }

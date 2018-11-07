@@ -30,12 +30,13 @@ public class Imagineproxy implements Element {
 	public void print() {
 		if(image == null) 
 		{
-			try {
-				image = new Imagine(nume);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+			image = new Imagine(nume);
 		}
 		image.print();
+	}
+
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
 	}
 }

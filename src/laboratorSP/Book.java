@@ -27,7 +27,6 @@ public class Book implements Element{
 	
 	public void add(Element e) {
 		capitole.add(e);
-		
 	}
 
 	public void remove(Element e) {
@@ -45,6 +44,12 @@ public class Book implements Element{
 		for (Element elem : capitole){
 			((Book) elem).print();
 		}
+	}
+
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

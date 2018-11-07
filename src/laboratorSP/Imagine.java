@@ -5,9 +5,13 @@ import java.util.concurrent.TimeUnit;
 public class Imagine implements Element {
 	private String numeImagine;
 	
-	public Imagine(String imagine) throws InterruptedException {
+	public Imagine(String imagine) {
 		this.numeImagine = imagine;
-		TimeUnit.SECONDS.sleep(5);
+		try {
+			TimeUnit.SECONDS.sleep(5);
+		} catch(InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public String getName() {
@@ -36,5 +40,10 @@ public class Imagine implements Element {
 	public void getChild(int index) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
 	}
 }

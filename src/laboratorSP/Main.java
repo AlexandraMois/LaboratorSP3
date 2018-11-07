@@ -13,20 +13,15 @@ public class Main {
 		cap1.add(p3);
 		Text p4 = new Text("Paragraph 4");
 		cap1.add(p4);
+		cap1.add(new Imagineproxy("ImageOne"));
+		cap1.add(new Imagine("ImageTwo"));
+		cap1.add(new Text("Some text"));
+		cap1.add(new Table("Table 1"));
 			
-		System.out.println("Printing without Alignment");
+		Bookstatistics stats = new Bookstatistics();
+		cap1.accept(stats);
+		stats.printStatistics();
 
-		System.out.println();
-		cap1.print();
-			
-		p1.setAlignStrategy(new Aligncenter());
-		p2.setAlignStrategy(new Alignright());
-		p3.setAlignStrategy(new Alignleft());
-			
-		System.out.println();
-		System.out.println("Printing with Alignment");
-		System.out.println();
-		cap1.print();
 
 	}
 

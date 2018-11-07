@@ -41,4 +41,9 @@ public class Text implements Element{
 			s.printAligned(this.text);
 		}
 	}
+
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
+	}
 }
